@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+
+    <canvas id="canvas"></canvas>
+    <div id="formGroup">
+<form  id="1" onsubmit=mathparse(event)>
+        <label for="eq1">f(x)=</label>
+        <input id="eq1" type="text">
+        <input type="submit" id="submit1" value="generate" >
+    </form>
+        <form  id="2" onsubmit=mathparse(event) style="display: none ">
+            <label for="eq2">f(x)=</label>
+            <input id="eq2" type="text">
+            <input type="submit" id="submit2" value="generate">
+        </form>
+        <form  id="3" onsubmit=mathparse(event) style="display: none ">
+            <label for="eq3">f(x)=</label>
+            <input id="eq3" type="text">
+            <input type="submit" id="submit3" value="generate">
+        </form>
+        <form  id="4" onsubmit=mathparse(event) style="display: none ">
+            <label for="eq4">f(x)=</label>
+            <input id="eq4" type="text">
+            <input type="submit" id="submit4" value="generate">
+        </form>
+        <button onclick="newEq(event)"> ADD
+        </button>
+    </div>
+<div id="buttonGroup">
+    <button onclick="zoomin()">+</button>
+    <button onclick="zoomout()">-</button>
+    <button onclick="left()"><<</button>
+    <button onclick="right()">>></button>
+    <button onclick="up()">^</button>
+    <button onclick="down()">v</button>
+</div>
+        
+        <script src="main.js" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+canvas{
+    background-color:  #b3ffe6;
+}
+body{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+#formGroup{
+    display: grid;
+    position: absolute;
+    left:43%;
+}
+#buttonGroup{
+    position: absolute;
+    right:5%
+}
