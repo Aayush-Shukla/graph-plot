@@ -12,13 +12,14 @@ var colors=["red","blue","black", "brown"]
 
 drawaxes()
 function mathparse(e){
+    e.preventDefault()
+
     ctx.clearRect(0,0,canvas.width,canvas.height)
     var eq=''
 
-    console.log(e)
-    e.preventDefault()
+    console.log( document.getElementById(`eq${e.target.id}`),1)
 
-    eqinput=document.getElementById(`eq${e.explicitOriginalTarget.id}`)
+    eqinput= document.getElementById(`eq${e.target.id}`)
     eqinput.disabled="true"
 
 
@@ -30,8 +31,8 @@ function mathparse(e){
     eq=eq.split("^").join("**");
     eq=eq.split("x").join("XX");
     eqArr.push(eq)
-    document.getElementById(`submit${e.explicitOriginalTarget.id}`).disabled='true'
-    console.log(e.explicitOriginalTarget.id,eqinput.value,`submit${e.explicitOriginalTarget.id}`)
+    document.getElementById(`submit${e.target.id}`).disabled='true'
+    // console.log(e.explicitOriginalTarget.id,eqinput.value,`submit${e.explicitOriginalTarget.id}`)
     drawaxes()
 
     drawGraph()
